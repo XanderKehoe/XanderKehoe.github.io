@@ -1,0 +1,386 @@
+<!DOCTYPE HTML>
+<!--
+	Dimension by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Xander Kehoe Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						
+						<div class="content">
+							<div class="inner">
+								<h1>Xander Kehoe</h1>
+								<p>Computer Engineering Student at the University of Tennessee - Chattanooga</p>
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li><a href="#intro">About Me</a></li>
+								<li><a href="#Projects">Projects</a></li>
+								<li><a href="#contact">Information</a></li>
+								<!--<li><a href="#elements">Elements</a></li>-->
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Intro -->
+							<article id="intro">
+								<h2 class="major">About Me</h2>
+								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
+								<p>My name is Xander Kehoe. I'm a computer enginnering student at the University of Tennessee - Chattanooga. Eager to learn anything and everything computer science related, currently very skilled in Java, C#, and Python. You can see some of <a href="#Projects">my projects here</a>.</p>
+							</article>
+
+						<!-- Work -->
+							<article id="Projects">
+								<h2 class="major">Climber-GA</h2>
+								<span class="image main"><img src="images/ClimberGA.gif" alt="" /></span>
+								<p>A self-learning AI that teaches itself how to navigate a randomly generated complex environment quickly by utilizing multi-threading.</p>
+								<p>Each of the agents that I call 'Climbers' have a simple goal, reach the blue box (the goal) at the top right side of the screen. They learn through the use of a Genetic Algorithm <a href="https://en.wikipedia.org/wiki/Genetic_algorithm">(More Information Here)</a>. However, all of these Climbers perform their calculations in the background on seperate threads, and only the 'Best Climber' (the climber with the highest recorded fitness) shown in purple is displayed in the program.</p>
+								<p>The platforms (both stationary and moving) I refer to as 'obstacles'. The red obstacles are 'lava' obstacles, if a climber touches a lava obstacle more than once without touching a normal obstacle inbetween, it will die.</p>
+								<p><a href="https://www.youtube.com/watch?v=NJ_e9yfyjcg&feature=youtu.be">Click here to see the video demonstration</a></p>
+								<p><a href="https://github.com/XanderKehoe/ClimberGA">Click here see the source code</a></p>
+
+								<h2 class="major">Vindicator</h2>
+								<span class="image main"><img src="images/VindicatorPics.PNG" alt="" /></span>
+								<p>An Android App that utilizes your phone's microphone to constantly record audio 24/7 as long as it is active. Once the audio recorded is older than X amount of minutes (determined by user settings), it will delete automatically unless manually saved.</p>
+								<p>Designed in mind to provide constant 24/7 legal protection, but also works for friends who keep changing their arguments every 5 minutes ¯\_(ツ)_/¯ </p>
+								<p>Feel free to check it out on <a href="https://play.google.com/store/apps/details?id=com.vind.xander.vindicator&hl=en_US">Google Play</a>.</p>
+
+								<h2 class="major">FlappyBird-GA</h2>
+								<span class="image main"><img src="images/FlappyBird.gif" alt="" /></span>
+								<p>A loose recreation of Flappy Bird with a self-learning AI that teaches itself how to play the game.</p>
+								<p>Created with: <a href="https://processing.org/">Processing</a></p>
+								<p>This program uses a genetic algorithm and a simple neural network to teach itself how to play. The 'Birds' are initalized with a bunch of random weights in their network, they gain 'fitness' by staying alive and going through the pipes. Once all the Birds die, the genetic algorithm randomly (weighted) picks two of them based upon their fitness. Their weights are combined to make a new 'child', and this child's weights have a small chance of mutating slightly. This process is repeated until the new population is full, and then the new population replaces the old one, and the whole cycle repeats. The "Best Bird" (described below) is always added to each new population without any modification to its weights.</p>
+								<p>The neural network class I designed for this project has no hidden nodes, and therefore consist simply of just an input layer and a single output node. The input layer consists of four inputs (position in x of Bird, position in y of Bird, position of closest pipe, y coordinate of the 'hole' in the closest pipe), and the output node determines if the Bird should jump.</p>
+								<p>Training may takes just a couple mintues, or could take a couple of hours.</p>
+								<p><a href="https://youtu.be/8KKZRY3YLHo">Click here to see the video demonstration</a></p>
+								<p><a href="https://github.com/XanderKehoe/FlappyBirdGA">Click here see the source code</a></p>
+
+								<h2 class="major">Neural Net Class</h2>
+								<p>Although there are many already out there, I wanted to create my own Neural Net class from scratch for learning sake. My class has the basic features of being able to feed forward and back propagate</p>
+								<p>I plan to make another version of this in the future. Although this works, I want to make a new version for two reasons:</p>
+								<ul>
+									<li>This version does not use matricies for computations, which would be a significant speed boost and make the code more readable. I didn't want to do at first due to fear that I might just end of copying/pasting other code while doing research, I figured this would be the best way to ensure I actually understand the concept.</li>
+									<li>This version lacks support for biases</li>
+								</ul>
+								<p>I also added a function that takes a brute force approach to find the best neural net architecure for a given training set of data.</p>
+								<p><a href="https://github.com/XanderKehoe/NeuralNetV1">Click here see the source code</a></p>
+
+								<h2 class="major">Github</h2>
+								<p>Feel free to checkout my GitHub profile to see more</p>
+								<ul class="icons">
+									<li><a href="https://github.com/XanderKehoe" class="icon brands fa-github"><span class="label">Github</span></a></li>
+								</ul>
+							</article>
+
+						<!-- Contact -->
+							<article id="contact">
+								<h2 class="major">Contact</h2>
+								<p>Email: xanmail99@gmail.com </p>
+								<p>Resume available upon request</p>
+
+								<!-- <form method="post" action="#">
+									<div class="fields">
+										<div class="field half">
+											<label for="name">Name</label>
+											<input type="text" name="name" id="name" />
+										</div>
+										<div class="field half">
+											<label for="email">Email</label>
+											<input type="text" name="email" id="email" />
+										</div>
+										<div class="field">
+											<label for="message">Message</label>
+											<textarea name="message" id="message" rows="4"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send Message" class="primary" /></li>
+										<li><input type="reset" value="Reset" /></li>
+									</ul>
+
+									<ul class="icons">
+										<li><a href="https://github.com/XanderKehoe" class="icon brands fa-github"><span class="label">Github</span></a></li>
+									</ul>
+								</form> -->
+							</article>
+
+						<!-- Elements -->
+							<article id="elements">
+								<h2 class="major">Elements</h2>
+
+								<section>
+									<h3 class="major">Text</h3>
+									<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
+									This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
+									This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
+									<hr />
+									<h2>Heading Level 2</h2>
+									<h3>Heading Level 3</h3>
+									<h4>Heading Level 4</h4>
+									<h5>Heading Level 5</h5>
+									<h6>Heading Level 6</h6>
+									<hr />
+									<h4>Blockquote</h4>
+									<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
+									<h4>Preformatted</h4>
+									<pre><code>i = 0;
+
+while (!deck.isInOrder()) {
+    print 'Iteration ' + i;
+    deck.shuffle();
+    i++;
+}
+
+print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+								</section>
+
+								<section>
+									<h3 class="major">Lists</h3>
+
+									<h4>Unordered</h4>
+									<ul>
+										<li>Dolor pulvinar etiam.</li>
+										<li>Sagittis adipiscing.</li>
+										<li>Felis enim feugiat.</li>
+									</ul>
+
+									<h4>Alternate</h4>
+									<ul class="alt">
+										<li>Dolor pulvinar etiam.</li>
+										<li>Sagittis adipiscing.</li>
+										<li>Felis enim feugiat.</li>
+									</ul>
+
+									<h4>Ordered</h4>
+									<ol>
+										<li>Dolor pulvinar etiam.</li>
+										<li>Etiam vel felis viverra.</li>
+										<li>Felis enim feugiat.</li>
+										<li>Dolor pulvinar etiam.</li>
+										<li>Etiam vel felis lorem.</li>
+										<li>Felis enim et feugiat.</li>
+									</ol>
+									<h4>Icons</h4>
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+									</ul>
+
+									<h4>Actions</h4>
+									<ul class="actions">
+										<li><a href="#" class="button primary">Default</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+									<ul class="actions stacked">
+										<li><a href="#" class="button primary">Default</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+								</section>
+
+								<section>
+									<h3 class="major">Table</h3>
+									<h4>Default</h4>
+									<div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>Name</th>
+													<th>Description</th>
+													<th>Price</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Item One</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Two</td>
+													<td>Vis ac commodo adipiscing arcu aliquet.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Three</td>
+													<td> Morbi faucibus arcu accumsan lorem.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Four</td>
+													<td>Vitae integer tempus condimentum.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Five</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+											</tbody>
+											<tfoot>
+												<tr>
+													<td colspan="2"></td>
+													<td>100.00</td>
+												</tr>
+											</tfoot>
+										</table>
+									</div>
+
+									<h4>Alternate</h4>
+									<div class="table-wrapper">
+										<table class="alt">
+											<thead>
+												<tr>
+													<th>Name</th>
+													<th>Description</th>
+													<th>Price</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Item One</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Two</td>
+													<td>Vis ac commodo adipiscing arcu aliquet.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Three</td>
+													<td> Morbi faucibus arcu accumsan lorem.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Four</td>
+													<td>Vitae integer tempus condimentum.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Five</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+											</tbody>
+											<tfoot>
+												<tr>
+													<td colspan="2"></td>
+													<td>100.00</td>
+												</tr>
+											</tfoot>
+										</table>
+									</div>
+								</section>
+
+								<section>
+									<h3 class="major">Buttons</h3>
+									<ul class="actions">
+										<li><a href="#" class="button primary">Primary</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+									<ul class="actions">
+										<li><a href="#" class="button">Default</a></li>
+										<li><a href="#" class="button small">Small</a></li>
+									</ul>
+									<ul class="actions">
+										<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
+										<li><a href="#" class="button icon solid fa-download">Icon</a></li>
+									</ul>
+									<ul class="actions">
+										<li><span class="button primary disabled">Disabled</span></li>
+										<li><span class="button disabled">Disabled</span></li>
+									</ul>
+								</section>
+
+								<section>
+									<h3 class="major">Form</h3>
+									<form method="post" action="#">
+										<div class="fields">
+											<div class="field half">
+												<label for="demo-name">Name</label>
+												<input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
+											</div>
+											<div class="field half">
+												<label for="demo-email">Email</label>
+												<input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
+											</div>
+											<div class="field">
+												<label for="demo-category">Category</label>
+												<select name="demo-category" id="demo-category">
+													<option value="">-</option>
+													<option value="1">Manufacturing</option>
+													<option value="1">Shipping</option>
+													<option value="1">Administration</option>
+													<option value="1">Human Resources</option>
+												</select>
+											</div>
+											<div class="field half">
+												<input type="radio" id="demo-priority-low" name="demo-priority" checked>
+												<label for="demo-priority-low">Low</label>
+											</div>
+											<div class="field half">
+												<input type="radio" id="demo-priority-high" name="demo-priority">
+												<label for="demo-priority-high">High</label>
+											</div>
+											<div class="field half">
+												<input type="checkbox" id="demo-copy" name="demo-copy">
+												<label for="demo-copy">Email me a copy</label>
+											</div>
+											<div class="field half">
+												<input type="checkbox" id="demo-human" name="demo-human" checked>
+												<label for="demo-human">Not a robot</label>
+											</div>
+											<div class="field">
+												<label for="demo-message">Message</label>
+												<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+											</div>
+										</div>
+										<ul class="actions">
+											<li><input type="submit" value="Send Message" class="primary" /></li>
+											<li><input type="reset" value="Reset" /></li>
+										</ul>
+									</form>
+								</section>
+
+							</article>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy; Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
