@@ -12,6 +12,7 @@
 		$header = $('#header'),
 		$footer = $('#footer'),
 		$main = $('#main'),
+		$loader = $(".loader-wrapper"),
 		$main_articles = $main.children('article');
 
 	// Breakpoints.
@@ -26,6 +27,7 @@
 
 	// Play initial animations on page load.
 		$window.on('load', function() {
+			$(".loader-wrapper").fadeOut("slow");
 			window.setTimeout(function() {
 				$body.removeClass('is-preload');
 			}, 100);
