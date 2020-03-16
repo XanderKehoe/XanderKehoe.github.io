@@ -109,8 +109,8 @@
 								<h2 class="major">Swarm A* Pathfinding</h2>
 								<span class="image main"><img src="images/PathfindingGIF.gif" alt="" /></span>
 								<p>A modified A* pathfinding algorithm for a more erratic looking behavior. Utilizes multithreading and complex data structures to maximize performance. </p>
-								<p>By utilizing a binary heap in our A* algorithm, running the pathfinding calculations on a seperate thread, and standard workload of all "seekers" across multiple threads, we can achieve extremely high performance.</p>
-								<p>Further optimization for collision checking is developed by diving the world into a grid, "seekers" will only test for collision with other seekers in their current grid chunk and the neighboring chunks. This skyrockets performance.</p>
+								<p>By utilizing a binary heap in our A* algorithm, running the pathfinding calculations on a seperate thread, and dividing the standard workload of all "seekers" across multiple threads, we can achieve extremely high performance.</p>
+								<p>Further optimization for collision checking is developed by dividing the world into a grid, "seekers" will only test for collision with other seekers in their current grid chunk and the neighboring chunks. This skyrockets performance.</p>
 								<p><a href="https://github.com/XanderKehoe/MassPathfinding">Click here see the source code</a></p>
 
 								<h2 class="major">Climber-GA</h2>
