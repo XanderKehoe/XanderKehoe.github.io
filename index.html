@@ -84,7 +84,6 @@
 								<p><a href="https://github.com/XanderKehoe/BladeTurbineGA">Click here see the source code</a></p>
 
 								<h2 class="major">Swarm A* Pathfinding</h2>
-								<span class="image main"><img src="images/PathfindingGIF.gif" alt="" loading="lazy"/></span>
 								<p>A modified A* pathfinding algorithm for a more erratic looking behavior. Utilizes multithreading and complex data structures to maximize performance. </p>
 								<p>By utilizing a binary heap in our A* algorithm, running the pathfinding calculations on a seperate thread, and dividing the standard workload of all "seekers" across multiple threads, we can achieve extremely high performance.</p>
 								<p>Further optimization for collision checking is developed by dividing the world into a grid, "seekers" will only test for collision with other seekers in their current grid chunk and the neighboring chunks. This skyrockets performance.</p>
@@ -92,7 +91,6 @@
 								<p><a href="https://github.com/XanderKehoe/MassPathfinding">Click here see the source code</a></p>
 
 								<h2 class="major">FlappyBird-GA</h2>
-								<span class="image main"><img src="images/FlappyBird.gif" alt="" loading="lazy"/></span>
 								<p>A loose recreation of Flappy Bird with a self-learning AI that teaches itself how to play the game.</p>
 								<p>Created with: <a href="https://processing.org/">Processing</a></p>
 								<p>This program uses a genetic algorithm and a simple neural network to teach itself how to play. The 'Birds' are initalized with a bunch of random weights in their network, they gain 'fitness' by staying alive and going through the pipes. Once all the Birds die, the genetic algorithm randomly (weighted) picks two of them based upon their fitness. Their weights are combined to make a new 'child', and this child's weights have a small chance of mutating slightly. This process is repeated until the new population is full, and then the new population replaces the old one, and the whole cycle repeats. The "Best Bird" (described below) is always added to each new population without any modification to its weights.</p>
@@ -102,7 +100,6 @@
 								<p><a href="https://github.com/XanderKehoe/FlappyBirdGA">Click here see the source code</a></p>
 
 								<h2 class="major">Climber-GA</h2>
-								<span class="image main"><img src="images/ClimberGA.gif" alt="" loading="lazy"/></span>
 								<p>A self-learning AI that teaches itself how to navigate a randomly generated complex environment quickly by utilizing multi-threading.</p>
 								<p>Each of the agents that I call 'Climbers' have a simple goal, reach the blue box (the goal) at the top right side of the screen. They learn through the use of a Genetic Algorithm <a href="https://en.wikipedia.org/wiki/Genetic_algorithm">(More Information Here)</a>. However, all of these Climbers perform their calculations in the background on seperate threads, and only the 'Best Climber' (the climber with the highest recorded fitness) shown in purple is displayed in the program.</p>
 								<p>The platforms (both stationary and moving) I refer to as 'obstacles'. The red obstacles are 'lava' obstacles, if a climber touches a lava obstacle more than once without touching a normal obstacle inbetween, it will die.</p>
