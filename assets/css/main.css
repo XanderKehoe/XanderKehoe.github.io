@@ -7,9 +7,8 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-html, body, div, span, applet, object,
-iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
-pre, a, abbr, acronym, address, big, cite,
+html, body, div, span, applet, object, h1, h2, h3, h4, h5, h6, p, blockquote,
+iframe, pre, a, abbr, acronym, address, big, cite,
 code, del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var, b,
 u, i, center, dl, dt, dd, ol, ul, li, fieldset,
@@ -26,9 +25,33 @@ section, summary, time, mark, audio, video {
 	vertical-align: baseline;
 }
 
+
+iframe{
+	margin: 0;
+	height: 21rem;
+	max-height: 100%;
+	position: relative;
+	vertical-align: middle;
+	width: 40rem;
+	max-width: 100%;
+}
+
+  /*
+.video-responsive{
+	position:relative;
+}
+.video-responsive iframe{
+	position: relative;
+	width:100%;
+	height: auto;
+	position: relative;
+	padding-bottom:56.25%;
+}*/
+
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-	display: block;}
+	display: block;
+}
 
 	.content {
 		display: flex;
@@ -1598,7 +1621,7 @@ input, select, textarea {
 			position: relative;
 			width: 40rem;
 			max-width: 100%;
-			background-color: rgba(27, 31, 34, 0.85);
+			background-color: rgba(34, 27, 34, 0.85);
 			border-radius: 4px;
 			opacity: 0;
 			float: left, right
@@ -1652,6 +1675,7 @@ input, select, textarea {
 					background-color: rgba(255, 255, 255, 0.175);
 				}
 
+				
 		@media screen and (max-width: 736px) {
 
 			#main article {
