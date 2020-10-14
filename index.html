@@ -63,9 +63,9 @@
 
 								<h3 class="major"><a href="#AI">-   A.I. / Machine Learning</a>.</h3>
 
-								<h3 class="major"><a href="#Apps">-   Mobile Applications</a>.</h3>
-
 								<h3 class="major"><a href="#GameProgramming">-   Game Programming</a>.</h3>
+
+								<h3 class="major"><a href="#Other">-   Other</a>.</h3>
 
 								<h2 class="major">Github</h2>
 								<p>Feel free to checkout my GitHub profile to see more</p>
@@ -118,7 +118,24 @@
 
 							</article>
 
-							<article id="Apps">
+							<article id="Other">
+								<h2 class="major">Economy Simulator</h2>
+								<span class="image main"><img src="images/EconomySimData.PNG" alt="" /></span>
+								<p>A barebones economy simulator that creates a complete economic cycle where people create businesses, businesses create products, people buy products, etc.</p>
+								<p>By default, every person starts off with 30,000 "Kehoes" which is the currency in this simulated world. They are given a random "intelligence" level, higher intelligence people can work more complex jobs lower intelligence people cannot, thus allowing them more employment opportunities. People will seek the highest intelligence related jobs they can first, before looking at lower intelligence requiring jobs. There are other properties they are randomly given that effect when they'll switch jobs, and decision making in their businesses should they make one.</p>
+								<p>Because actual human intuition is impossible to program, I have substituted it with random behavior. Every person has a 1/1000 chance of creating a business every day, unless they're already running a business. Every business owner will hire/fire employees and raise/lower cost of their product based upon their profits. When created, businesses create a random product of a random category. Categories are self explanatory, there are 4 built in categories, Food, Residence, Automobile, and Furniture, the last two options are pretty random I am aware. However, new categories can be created by a very small chance when a new business is created, this allows for a more arbitrary and general economic model.</p>
+								<p>Each person will buy food and residence as needed, if they cannot find food or residence that they are satisfied with, they will pick the cheapest product they will find. After that, every person has a normally distributed random 'personal interest' in each category of products. Making some individuals more likely to buy certain products even if at a higher price. Ex. Some people really like cars, and will pay a lot more a higher quality automobile.</p>
+								<p>Every product created by a business has the following properties: </p>
+								<ul>
+									<li>Required Production: How much work is required to create this product.</li>
+									<li>Required Intelligence: What intelligence level is required in order for a person to create this product.</li>
+									<li>Quality: An arbitrary value, people are more willing to buy products with higher quality, and in some cases, even at a higher price.</li>
+									<li>Expiration: How many days the product will last.</li>
+								</ul>
+								<p>Every business will list their inventory of products onto the "market", where consumers can compare and contrast their product with the product's of other businesses.</p>
+								<p>The simulator tracks a variety of data such as unenployment rates, homelessness rates, starvation rates, quality of life, average extra spending money per person, and more is very easy to implement.  </p>
+								<p><a href="https://github.com/XanderKehoe/EconomySimulator">Click here see the source code</a></p>
+
 								<h2 class="major">Vindicator</h2>
 								<span class="image main"><img src="images/VindicatorPics.PNG" alt="" /></span>
 								<p>An Android App that utilizes your phone's microphone to constantly record audio as long as it is active. Once the audio recorded is older than X amount of minutes (determined by user settings), it will delete automatically unless manually saved.</p>
