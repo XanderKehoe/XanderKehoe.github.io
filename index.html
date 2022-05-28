@@ -73,6 +73,14 @@
 							</article>
 
 							<article id="AI">
+								<h2 class="major">RPG Character Team Learns to Defeat Dragon Boss With Machine Learning</h2>
+								<iframe src="https://www.youtube.com/embed/CmocLjfdrx8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								<p></p>
+								<p>This Unity Project is a loose recreation of a boss battle you see in most MMORPG style games, a team of 5 characters controlled by a reinforcement learning based AI must figure out how to defeat the dragon boss, and then do so in as little time as possible.</p>
+								<p>Results from this project were astounding, the AI not only learned how to defeat the boss, but how to take advantage of certain exploitive game mechanics to do this in a very small amount of time.</p>
+								<p>Through the AI, I was able to identify these exploitive techniques and fix them. The AI was then trained again and it adopted a new stratedy to defeat the dragon.</p>
+								<p><a href="https://github.com/XanderKehoe/RpgBossFightMachineLearning/">Click here see the source code</a></p>
+
 								<h2 class="major">Electric Turbine Design with Genetic Algorithm</h2>
 								<span class="image main"><img src="images/ElectricTurbineSolidWorks.PNG" alt="" /></span>
 								<p>My friend Landon who is a Mechanical Engineering Major (with an Aerospace specialization) came to me asking for my help for a project he was working on. He was building a fixed-wing drone with VTOL capabilites, and needed to know the best parameters for his electric turbine engine such as diameter, the number of blades, and the angles of the blades at the root and at the tip to produce the maximum amount of thrust without exceeding a certain amount of torque. He knew of my expertise with genetic algorithms and asked if it was possible to help, and of course I did.</p>
@@ -81,39 +89,21 @@
 								<p>His initial goal was 2.5 lbs of force, and the algorithm was able to find a set of parameters that produced 2.99 lbs of force. Overall the algorithm was a huge success, he can easily switch out the parameters on his own to play around with.</p>
 								<p><a href="https://github.com/XanderKehoe/BladeTurbineGA">Click here see the source code</a></p>
 
-								<h2 class="major">Swarm A* Pathfinding</h2>
-								<p>A modified A* pathfinding algorithm for a more erratic looking behavior. Utilizes multithreading and complex data structures to maximize performance. </p>
-								<p>By utilizing a binary heap in our A* algorithm, running the pathfinding calculations on a seperate thread, and dividing the standard workload of all "seekers" across multiple threads, we can achieve extremely high performance.</p>
-								<p>Further optimization for collision checking is developed by dividing the world into a grid, "seekers" will only test for collision with other seekers in their current grid chunk and the neighboring chunks. This skyrockets performance.</p>
-								<iframe src="https://www.youtube.com/embed/pYVw5PfRigI?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-								<p><a href="https://github.com/XanderKehoe/MassPathfinding">Click here see the source code</a></p>
-
 								<h2 class="major">FlappyBird - GA</h2>
+								<iframe src="https://www.youtube.com/embed/4CRqDttVt6c?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 								<p>A loose recreation of Flappy Bird with a self-learning AI that teaches itself how to play the game.</p>
 								<p>Created with: <a href="https://processing.org/">Processing</a></p>
 								<p>This program uses a genetic algorithm and a simple neural network to teach itself how to play. The 'Birds' are initalized with a bunch of random weights in their network, they gain 'fitness' by staying alive and going through the pipes. Once all the Birds die, the genetic algorithm randomly (weighted) picks two of them based upon their fitness. Their weights are combined to make a new 'child', and this child's weights have a small chance of mutating slightly. This process is repeated until the new population is full, and then the new population replaces the old one, and the whole cycle repeats. The "Best Bird" (described below) is always added to each new population without any modification to its weights.</p>
 								<p>The neural network class I designed for this project has no hidden nodes, and therefore consist simply of just an input layer and a single output node. The input layer consists of four inputs (position in x of Bird, position in y of Bird, position of closest pipe, y coordinate of the 'hole' in the closest pipe), and the output node determines if the Bird should jump.</p>
 								<p>Training may takes just a couple mintues, or could take a couple of hours.</p>
-								<iframe src="https://www.youtube.com/embed/4CRqDttVt6c?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 								<p><a href="https://github.com/XanderKehoe/FlappyBirdGA">Click here see the source code</a></p>
 
 								<h2 class="major">Climber - GA</h2>
+								<iframe src="https://www.youtube.com/embed/MSf6imsExeU?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 								<p>A self-learning AI that teaches itself how to navigate a randomly generated complex environment quickly by utilizing multi-threading.</p>
 								<p>Each of the agents that I call 'Climbers' have a simple goal, reach the blue box (the goal) at the top right side of the screen. They learn through the use of a Genetic Algorithm <a href="https://en.wikipedia.org/wiki/Genetic_algorithm">(More Information Here)</a>. However, all of these Climbers perform their calculations in the background on seperate threads, and only the 'Best Climber' (the climber with the highest recorded fitness) shown in purple is displayed in the program.</p>
 								<p>The platforms (both stationary and moving) I refer to as 'obstacles'. The red obstacles are 'lava' obstacles, if a climber touches a lava obstacle more than once without touching a normal obstacle inbetween, it will die.</p>
-								<iframe src="https://www.youtube.com/embed/MSf6imsExeU?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 								<p><a href="https://github.com/XanderKehoe/ClimberGA">Click here see the source code</a></p>
-
-								<h2 class="major">Neural Net Class - Python</h2>
-								<p>Although there are many already out there, I wanted to create my own Neural Net class from scratch for learning sake. My class has the basic features of being able to feed forward and back propagate.</p>
-								<p>I plan to make another version of this in the future. Although this works, I want to make a new version for two reasons:</p>
-								<ul>
-									<li>This version does not use matricies for computations, which would be a significant speed boost and make the code more readable. I didn't want to do at first due to fear that I might just end of copying/pasting other code while doing research, I figured this would be the best way to ensure I actually understand the concept.</li>
-									<li>This version lacks support for biases</li>
-								</ul>
-								<p>I also added a function that takes a brute force approach to find the best neural net architecture for a given training set of data.</p>
-								<p><a href="https://github.com/XanderKehoe/NeuralNetV1">Click here see the source code</a></p>
-
 							</article>
 
 							<article id="Other">
@@ -158,7 +148,21 @@
 								<p>There is many features for adding connectors (with or without a specified group) and ensuring no duplicate ids occur, request to dock at a particular connector or connector group, if a request to dock at a specific connector group that is already full is received, wait until a connector from the group is free (placing the request into a 'Docking Que') and then send an update back to the request granting it permission to dock, also ensure only one ship is using a particular path at a time to avoid collisions, automated antenna management (only one message can be sent per ingame 'tick', if multiple are needed to be sent, then the rest of the messages are simply added to a 'Messague Que'). The most advanced feature (in my opinion), is that the spaceport is able to mobile, this means all stored coordinates for group pathing must be translated back and forth from relative to world coordinates with respect to both position and orientation, which takes a fair bit of math of accomplish.</p>
 								<p>For more Information of the math and code behind this project: <a href="#SpacePortInfo">here</a></p>
 								<p>Source code is available: <a href="https://github.com/XanderKehoe/Space-Engineers-Spaceport-Manager">here</a></p>
+
+								<h2 class="major">Swarm A* Pathfinding</h2>
+								<p>A modified A* pathfinding algorithm for a more erratic looking behavior. Utilizes multithreading and complex data structures to maximize performance. </p>
+								<p>By utilizing a binary heap in our A* algorithm, running the pathfinding calculations on a seperate thread, and dividing the standard workload of all "seekers" across multiple threads, we can achieve extremely high performance.</p>
+								<p>Further optimization for collision checking is developed by dividing the world into a grid, "seekers" will only test for collision with other seekers in their current grid chunk and the neighboring chunks. This skyrockets performance.</p>
+								<iframe src="https://www.youtube.com/embed/pYVw5PfRigI?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								<p><a href="https://github.com/XanderKehoe/MassPathfinding">Click here see the source code</a></p>
 					
+								<h3 class="major">Space Engineers - Planetary Autopilot Manager</h3>
+								<span class="image main"><img src="images/PlanetaryAutopilotManager.png" alt="" loading="lazy" /></span>
+								<p>A Space Engineers Programmable Block Script for automatic traversal across planets.</p>
+								<p>This script controls a ship's thrusters and gyroscopes so that the ship reaches any set destination on a planet. While the game does feature an already built in autopilot mechanic, it is not reliable as it does not do a great job of detecting planets or asteroids, and often runs into them. This script was made to address this flaw for planets.</p>
+								<p>Technical challenges included determining force output to maintain a target elevation, using LIDAR to avoid collosions with any obstacles or terrain, aligning the ship such that upward thrusters were aligned with gravity and forward thrusters were aligned with target destination, and more.</p>
+								<p>Source code is available: <a href="https://github.com/XanderKehoe/SE-PlanetaryAutopilotManager">here</a></p>
+
 								<h3 class="major">Space Engineers - Laser Antenna Network</h3>
 								<span class="image main"><img src="images/SE2.PNG" alt="" /></span>
 								<p>A Space Engineers Programmable Block Script for intergrid communication using laser antennas.</p>
