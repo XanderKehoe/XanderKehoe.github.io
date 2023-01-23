@@ -85,6 +85,12 @@
 								<p>Through the AI, I was able to identify these exploitive techniques and fix them. The AI was then trained again and it adopted a new strategy to defeat the dragon.</p>
 								<p><a href="https://github.com/XanderKehoe/RpgBossFightMachineLearning/">Click here see the source code</a></p>
 
+								<h2 class="major">Primitive Survival Environment for Reinforcement Learning</h2>
+								<span class="image main"><img src="images/PrimitiveSurvivalThumbnail.png" alt="" /></span>
+								<p>A reinforcement learning environment where the goal is to have an agent learn to survive in a harsh stone-era inspired environment. Starting with no food, equipment, or even knowledge of how the world works; the agent must learn to find food, craft equipment, and fend off hostile animals in order to survive.</p>
+								<p>The environment was created in C++ through the <a href="https://www.libsdl.org/">Simple DirectMedia Layer 2.0 (SDL2)</a> library. Shared interprocess memory is used to communicate between the environment and with a Python client script which preproccess the data before being sent to a Python server script which handles the training of the agent. These python scripts utilize Ray's <a href="https://docs.ray.io/en/latest/rllib/index.html">RLlib: Industry-Grade Reinforcement Learning</a> library to support easy use of a wide range of RL algorithms with exceptional performance.</p>
+								<p>The AI of the animals in the environment utilize a Finite State Machine to control their behavior. Hostile animals utilize A* pathfinding to navigate towards the agent, while passive animals use it to navigate away from the agent.</p>
+
 								<h2 class="major">Electric Turbine Design with Genetic Algorithm</h2>
 								<span class="image main"><img src="images/ElectricTurbineSolidWorks.PNG" alt="" /></span>
 								<p>My friend Landon who is a Mechanical Engineering Major (with an Aerospace specialization) came to me asking for my help for a project he was working on. He was building a fixed-wing drone with VTOL capabilites, and needed to know the best parameters for his electric turbine engine such as diameter, the number of blades, and the angles of the blades at the root and at the tip to produce the maximum amount of thrust without exceeding a certain amount of torque. He knew of my expertise with genetic algorithms and asked if it was possible to help, and of course I did.</p>
