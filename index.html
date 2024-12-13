@@ -29,8 +29,7 @@
 						<div class="content">
 							<div class="inner">
 								<h1>Xander Kehoe</h1>
-								<p>Software Engineer</p>
-								<p>Machine Learning Student at Georgia Institute of Technology</p>
+								<p>Reinforcement Learning Research Engineer</p>
 							</div>
 						</div>
 						<nav>
@@ -48,12 +47,7 @@
 						<!-- Intro -->
 							<article id="intro">
 								<h2 class="major">About Me</h2>
-								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
-								<p>My name is Xander Kehoe. I'm a computer engineering graduate from the University of Tennessee - Chattanooga, and currently working towards my masters degree in Machine Learning from The Georgia Institute of Technology.</p>
-								<p>I have work experience as a software engineer in the Space & Defense Industry. I'm highly proficient in programming in any high level programming languages such as C/C++, C#, Java, Python. You can view some of <a href="#Projects">my personal projects here</a>.</p>
-								<p>My love for video games prompted me to learn more about them, which led me to programming. I learned to create mods to enhance my gameplay experience, how to create scripts to automate my character’s movement and actions to perform grindy task overnight while I slept, played games that supported in-game programming to automate tasks and other ease of life functions, and eventually I learned how to make my own basic games.</p>
-								<p>I later honed my skills when I finally got the Chattanooga State Community College and had my first real programming classes in Java. I thoroughly enjoyed all my programming classes and always have looked forward to more.</p>
-								<p>Although I don’t play video games nearly as much (probably for the better), my love for programming and desire to learn more about computer science/engineering remains. </p>
+								<p>I am a Machine Learning Research Engineer specializing in reinforcement learning. With a strong foundation in computer science and engineering, I have experience designing and implementing AI solutions for dynamic environments, including aerospace and defense. My technical expertise spans Python, PyTorch, TensorFlow, Unity, and AWS, which I leverage to create cutting-edge applications and open-source contributions. I’m passionate about solving complex problems, advancing AI research, and building impactful software solutions.</p>
 							</article>
 
 						<!-- Work -->
@@ -64,8 +58,6 @@
 
 								<h3 class="major"><a href="#GameProgramming">-   Game Programming</a>.</h3>
 
-								<h3 class="major"><a href="#Other">-   Other</a>.</h3>
-
 								<h2 class="major">Github</h2>
 								<p>Feel free to checkout my GitHub profile to see more</p>
 								<ul class="icons">
@@ -74,6 +66,11 @@
 							</article>
 
 							<article id="AI">
+								<h2 class="major">Trash Pickup - PufferLib</h2>
+								<span class="image main"><img src="images/TrashPickup.PNG" alt="" /></span>
+								<p>Part of <a href="https://github.com/PufferAI/PufferLib">PufferLib's</a> "Ocean" suite, this is high-performance multi-agent reinforcement learning environment is created in C with Cython bindings to be able to train RL models in python. With PufferLib, thousands of instances of this environment can simultaneously be spun up to achieve exceptional simulation speed (~500,000 steps/second on standard at-home hardware), enabling rapid experimentation. Designed the environment with extensive configurability, supporting variations in size, number of agents, and task complexity to suit diverse research needs.</p>
+								
+								
 								<h2 class="major">RPG Character Team Learns to Defeat Dragon Boss With Machine Learning (Part 1)</h2>
 								<iframe src="https://www.youtube.com/embed/CmocLjfdrx8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 								<p></p>
@@ -105,7 +102,6 @@
 								<p>Created with: <a href="https://processing.org/">Processing</a></p>
 								<p>This program uses a genetic algorithm and a simple neural network to teach itself how to play. The 'Birds' are initalized with a bunch of random weights in their network, they gain 'fitness' by staying alive and going through the pipes. Once all the Birds die, the genetic algorithm randomly (weighted) picks two of them based upon their fitness. Their weights are combined to make a new 'child', and this child's weights have a small chance of mutating slightly. This process is repeated until the new population is full, and then the new population replaces the old one, and the whole cycle repeats. The "Best Bird" (described below) is always added to each new population without any modification to its weights.</p>
 								<p>The neural network class I designed for this project has no hidden nodes, and therefore consist simply of just an input layer and a single output node. The input layer consists of four inputs (position in x of Bird, position in y of Bird, position of closest pipe, y coordinate of the 'hole' in the closest pipe), and the output node determines if the Bird should jump.</p>
-								<p>Training may takes just a couple mintues, or could take a couple of hours.</p>
 								<p><a href="https://github.com/XanderKehoe/FlappyBirdGA">Click here see the source code</a></p>
 
 								<h2 class="major">Climber - GA</h2>
@@ -114,40 +110,6 @@
 								<p>Each of the agents that I call 'Climbers' have a simple goal, reach the blue box (the goal) at the top right side of the screen. They learn through the use of a Genetic Algorithm <a href="https://en.wikipedia.org/wiki/Genetic_algorithm">(More Information Here)</a>. However, all of these Climbers perform their calculations in the background on seperate threads, and only the 'Best Climber' (the climber with the highest recorded fitness) shown in purple is displayed in the program.</p>
 								<p>The platforms (both stationary and moving) I refer to as 'obstacles'. The red obstacles are 'lava' obstacles, if a climber touches a lava obstacle more than once without touching a normal obstacle inbetween, it will die.</p>
 								<p><a href="https://github.com/XanderKehoe/ClimberGA">Click here see the source code</a></p>
-							</article>
-
-							<article id="Other">
-							<!--
-								<h2 class="major">Economy Simulator</h2>
-								<span class="image main"><img src="images/EconomySimData.PNG" alt="" /></span>
-								<p>A barebones economy simulator that creates a complete economic cycle where people create businesses, businesses create products, people buy products, etc.</p>
-								<p>By default, every person starts off with 30,000 "Kehoes" which is the currency in this simulated world. They are given a random "intelligence" level, higher intelligence people can work more complex jobs lower intelligence people cannot, thus allowing them more employment opportunities. People will seek the highest intelligence related jobs they can first, before looking at lower intelligence requiring jobs. There are other properties they are randomly given that effect when they'll switch jobs, and decision making in their businesses should they make one.</p>
-								<p>Because actual human intuition is impossible to program, I have substituted it with random behavior. Every person has a 1/1000 chance of creating a business every day, unless they're already running a business. Every business owner will hire/fire employees and raise/lower cost of their product based upon their profits. When created, businesses create a random product of a random category. Categories are self explanatory, there are 4 built in categories, Food, Residence, Automobile, and Furniture, the last two options are pretty random I am aware. However, new categories can be created by a very small chance when a new business is created, this allows for a more arbitrary and general economic model.</p>
-								<p>Each person will buy food and residence as needed, if they cannot find food or residence that they are satisfied with, they will pick the cheapest product they will find. After that, every person has a normally distributed random 'personal interest' in each category of products. Making some individuals more likely to buy certain products even if at a higher price. Ex. Some people really like cars, and will pay a lot more a higher quality automobile.</p>
-								<p>Every product created by a business has the following properties: </p>
-								<ul>
-									<li>Required Production: How much work is required to create this product.</li>
-									<li>Required Intelligence: What intelligence level is required in order for a person to create this product.</li>
-									<li>Quality: An arbitrary value, people are more willing to buy products with higher quality, and in some cases, even at a higher price.</li>
-									<li>Expiration: How many days the product will last.</li>
-								</ul>
-								<p>Every business will list their inventory of products onto the "market", where consumers can compare and contrast their product with the product's of other businesses.</p>
-								<p>The simulator tracks a variety of data such as unenployment rates, homelessness rates, starvation rates, quality of life, average extra spending money per person, and more is very easy to implement.  </p>
-								<p><a href="https://github.com/XanderKehoe/EconomySimulator">Click here see the source code</a></p>
-							-->
-
-								<h2 class="major">Arduino PIR Motion Sensor with Bluetooth</h2>
-								<span class="image main"><img src="images/MotionSensor.jpg" alt="" /></span>
-								<p>An Arduino linked with a PIR Motion Sensor that sends data to my computer via Bluetooth serial communication.</p>
-								<p>Plays a sound on my computer when motion is detected.</p>
-								<p><a href="https://github.com/XanderKehoe/MotionSensor">Click here see the source code</a></p>
-							<!--
-								<h2 class="major">Vindicator</h2>
-								<span class="image main"><img src="images/VindicatorPics.PNG" alt="" /></span>
-								<p>An Android App that utilizes your phone's microphone to constantly record audio as long as it is active. Once the audio recorded is older than X amount of minutes (determined by user settings), it will delete automatically unless manually saved.</p>
-								<p>Designed in mind to provide constant 24/7 legal protection.</p>
-								<p>Feel free to check it out on <a href="https://play.google.com/store/apps/details?id=com.vind.xander.vindicator&hl=en_US">Google Play</a>.</p>
-							-->
 							</article>
 
 							<article id="GameProgramming">
@@ -333,33 +295,8 @@ else
 								<h2 class="major">Contact</h2>
 								<p>Feel free to contact if you believe I would be a good fit for any position in your organization.</p>
 								<p>Email: xanmail99@gmail.com </p>
-								<p>Phone: 423-316-8586</p>
+								<p>Phone: 256-652-3236</p>
 								<a href="Resume.pdf" target="_blank" class="button">Resume</a>
-
-								<!-- <form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="4"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Reset" /></li>
-									</ul>
-
-									<ul class="icons">
-										<li><a href="https://github.com/XanderKehoe" class="icon brands fa-github"><span class="label">Github</span></a></li>
-									</ul>
-								</form> -->
 							</article>
 
 						<!-- Elements -->
